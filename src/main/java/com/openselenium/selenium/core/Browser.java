@@ -3,6 +3,7 @@ package com.openselenium.selenium.core;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.openselenium.selenium.utility.PropertyFileReaderUtil;
 
@@ -38,13 +39,17 @@ public class Browser {
 		// initialize all browser here
 
 		if (browserName.equalsIgnoreCase("firefox")) {
+			setFirefoxProperties();
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("chrome")) {
+			setChromeProperties();
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("internetexplorer")) {
-			driver = new ChromeDriver();
+			setInternetExplorerProperties();
+			driver = new InternetExplorerDriver();
 		} else {
 			// by default return fire fox
+			setFirefoxProperties();
 			driver = new FirefoxDriver();
 		}
 

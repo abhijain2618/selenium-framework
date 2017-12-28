@@ -13,8 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
 
-	public XSSFWorkbook excelWorkBook; // for .xlsx extension 
-	// public HSSFWorkbook excelWorkBook; for .xls extension 
+	public XSSFWorkbook excelWorkBook; 
 	public XSSFSheet excelSheet;
 	public XSSFCell cell;
 	public XSSFRow row;
